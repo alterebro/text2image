@@ -1,3 +1,3 @@
-# text2image [text2image.moro.es](https://text2image.moro.es)
+# text2image
 
-Work in progress...
+URL : [text2image.moro.es](https://text2image.moro.es)
