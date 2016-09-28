@@ -34,7 +34,7 @@ if (!DEV_MODE) { ob_start(); }
 	<meta name="twitter:title" property="og:title" itemprop="title name" content="Text to Image Generator" />
 	<meta name="twitter:description" property="og:description" itemprop="description" content="Generate beautiful gradient images based on the MD5 hash values of any given text" />
 	<meta name="twitter:url" property="og:url" itemprop="url" content="<?php echo URL; ?>" />
-	<meta name="twitter:image" property="og:image" itemprop="image" content="<?php echo ROOT; ?>/frontend/images/text-to-image.png" />
+	<meta name="twitter:image" property="og:image" itemprop="image" content="<?php echo ROOT; ?>/frontend/images/text-to-image.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@alterebro" />
 	<meta name="twitter:creator" content="@alterebro" />
