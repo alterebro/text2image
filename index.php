@@ -22,16 +22,16 @@ $image = ($url_str) ? text2image($url_str) : $default_image;
 
 if (!DEV_MODE) { ob_start(); }
 ?><!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Text to Image Generator</title>
+	<title>Text to Image Generator. MD5 visualization</title>
 	<meta name="description" content="Generate beautiful gradient images based on the MD5 hash values of any given text" />
 	<meta name="author" content="Jorge Moreno aka moro, moro.es (@alterebro)" />
 	<meta name="MobileOptimized" content="width" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="theme-color" content="#222" />
-	<meta name="twitter:title" property="og:title" itemprop="title name" content="Text to Image Generator" />
+	<meta name="twitter:title" property="og:title" itemprop="title name" content="Text to Image Generator. MD5 visualization" />
 	<meta name="twitter:description" property="og:description" itemprop="description" content="Generate beautiful gradient images based on the MD5 hash values of any given text" />
 	<meta name="twitter:url" property="og:url" itemprop="url" content="<?php echo URL; ?>" />
 	<meta name="twitter:image" property="og:image" itemprop="image" content="<?php echo ROOT; ?>/frontend/images/text-to-image.jpg" />
@@ -61,17 +61,17 @@ if (!DEV_MODE) { ob_start(); }
 		<form id="f" method="get" autocomplete="off">
 			<p>
 				<label for="s">Text Input</label>
-				<input type="text" name="s" id="s" placeholder="Insert your Text Here" required />
+				<input type="text" name="s" id="s" placeholder="Insert your Text Here" spellcheck="false" required />
 				<input type="submit" value="generate" />
 			</p>
 		</form>
 		<p id="o">
-			<img id="i" src="<?php echo $image['image'] ?>" width="400" />
+			<img id="i" src="<?php echo $image['image'] ?>" alt="text2image" width="400" />
 		</p>
 
 		<?php if ($url_str) : ?>
 		<ul id="dl">
-			<li>[ <a id="l" href="<?php echo $image['image'] ?>" download="text2image.moro.es-<?php echo substr($image['hash'], 0, 16) ?>.png">Download Generated Image</a> ]</li>
+			<li>[ <a id="l" href="<?php echo $image['image'] ?>" download="text2image.moro.es-<?php echo substr($image['hash'], 0, 8) ?>.png">Download Generated Image</a> ]</li>
 			<li><strong>String</strong> : <em id="ds"><?php echo $image['string'] ?></em></li>
 			<li><strong>MD5 Hash</strong> : <em id="dh"><?php echo $image['hash'] ?></em></li>
 		</ul>

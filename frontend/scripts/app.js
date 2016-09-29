@@ -43,7 +43,7 @@ var txt2img = function(str) {
 		}
 
 		var image_data = ctx.canvas.toDataURL('image/png');
-		var filename = 'text2image.moro.es-' + str_hash.substr(0, 16) + '.png';
+		var filename = 'text2image.moro.es-' + str_hash.substr(0, 8) + '.png';
 
 		var img = document.getElementById('i'); // image output
 			img.setAttribute('width', 400);
