@@ -78,6 +78,7 @@ function convert(str) {
 
 	var url_sh = window.location.href;
 		url_sh = url_sh.split('?')
+		url_sh = url_sh[0].split('#o');
 	for (var i=0; i< social_networks.length; i++) {
 		document.querySelector('#' + social_networks[i]['id']).href = url_sh[0] + '?s=' + generated.string;
 	}
